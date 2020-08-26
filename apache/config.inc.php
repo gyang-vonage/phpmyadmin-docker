@@ -116,6 +116,7 @@ for ($i = 1; isset($hosts[$i - 1]); $i++) {
     }
     $cfg['Servers'][$i]['compress'] = false;
     $cfg['Servers'][$i]['AllowNoPassword'] = true;
+    $cfg['Servers'][$i]['tracking'] = true;
 }
 for ($i = 1; isset($sockets[$i - 1]); $i++) {
     $cfg['Servers'][$i]['socket'] = $sockets[$i - 1];
@@ -130,6 +131,11 @@ $i--;
 /* Uploads setup */
 $cfg['UploadDir'] = '';
 $cfg['SaveDir'] = '';
+
+$cfg['AuthLog'] = true;
+
+$cfg['DBG']['sql'] = true;
+$cfg['DBG']['sqllog'] = true;
 
 /* Include User Defined Settings Hook */
 if (file_exists('/etc/phpmyadmin/config.user.inc.php')) {
