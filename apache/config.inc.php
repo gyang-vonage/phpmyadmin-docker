@@ -117,7 +117,7 @@ for ($i = 1; isset($hosts[$i - 1]); $i++) {
     $cfg['Servers'][$i]['compress'] = false;
     $cfg['Servers'][$i]['AllowNoPassword'] = true;
     $cfg['Servers'][$i]['tracking'] = true;
-    $cfg['Servers'][$i]['auth_type'] = 'http';
+    $cfg['Servers'][$i]['auth_type'] = 'cookie';
 }
 for ($i = 1; isset($sockets[$i - 1]); $i++) {
     $cfg['Servers'][$i]['socket'] = $sockets[$i - 1];
